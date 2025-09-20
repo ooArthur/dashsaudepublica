@@ -1,0 +1,35 @@
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+*.egg
+*.log
+
+# Virtual env
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# === Sistema ===
+.DS_Store
+Thumbs.db
+
+# === VSCode ===
+.vscode/
+*.code-workspace
+
+# === Docker ===
+/*.pid
+*.log
+
+# === Dados ===
+data/raw/
+data/processed/

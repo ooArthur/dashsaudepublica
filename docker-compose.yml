@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: datasaude_app
+    ports:
+      - "8080:8080"          # mapeia porta do host → container
+    volumes:
+      - .:/appdatasaude      # monta o projeto inteiro dentro do container
+      - ./data:/appdatasaude/data  # persiste dados fora do container
+    environment:
+      STREAMLIT_SERVER_HEADLESS: "true"
+      STREAMLIT_SERVER_PORT: "8080"
+      STREAMLIT_SERVER_ENABLECORS: "false"
+      STREAMLIT_SERVER_ADDRESS: "0.0.0.0"
+    command: streamlit run Dashboard.py
